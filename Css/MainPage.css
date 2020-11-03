@@ -1,0 +1,138 @@
+html{
+    height: 100;
+}
+body{
+    height: 100;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    background-color: rgba(10, 10, 10, 0.815);
+}
+#main{
+    position: absolute;
+    box-shadow: 10px 10px 20px  black;
+    background-image: url("../Images/01_preview1.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: #E6E6FA;
+    height: 90%;
+    width: 80%;
+    top: 5%;
+    left: 10%;
+    overflow: hidden;
+}
+/************Forms**************/
+#loginForm,#signupForm,#adminForm,#InsertProduct,#PAYMENTFORM{
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    transform: translateY(-600px);
+    left: 25%;
+    background-color: rgba(14, 13, 13, 0.904);
+    box-shadow: 10px 10px 10px black;
+    transition-duration: 300ms;
+}
+
+#loginForm input,#signupForm input,#adminForm input,#InsertProduct input,#PAYMENTFORM input{
+    box-sizing: border-box;
+    position: relative;
+    left: 5%;
+    width: 90%;
+    padding: 8px 0px;
+    margin: 5px 0px;
+    transition-duration: 200ms;
+    border: none;
+    outline: none;
+}
+#PAYMENTFORM input[type="text"]::placeholder{
+    color: grey;
+}
+#InsertProduct input[type="text"]::placeholder{
+    color: grey;
+}
+#InsertProduct textarea{
+    padding: 5px 0px;
+    margin: 5px 0px;
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    left: 5%;
+}
+#InsertProduct span{
+    position: relative;
+    display: block;
+    width: 90%;
+    left: 5%;
+    background-color: rgba(255, 245, 238, 0.459);
+}
+#progressBar{
+    text-align: center;
+    display: block;
+    width: 0%;
+    background-color: green;
+}
+#updateUser ,#UpdateAdmin{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding: 8px 0px;
+    border: none;
+    outline: none;
+}
+#loginForm input:nth-child(4),#signupForm input:nth-child(5),#adminForm input:nth-child(5),#InsertPictSubmit{
+    background-color: rgba(0, 128, 0, 0.301);
+    color: snow;
+}
+#loginForm input:nth-child(4):hover,#signupForm input:nth-child(5):hover,#adminForm input:nth-child(5):hover,#InsertPictSubmit:hover{
+    background-color: rgba(13, 197, 13, 0.712);
+    color: snow;
+}
+#updateUser,#UpdateAdmin{
+    background-color: rgba(255, 51, 0, 0.363);
+    color: snow;
+}
+#PAYNOW{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding: 8px 0px;
+    border: none;
+    outline: none;
+    background-color:rgba(0, 128, 0, 0.301);
+    color: snow;
+}
+#PAYNOW:hover{
+    background-color: rgba(13, 197, 13, 0.712);
+}
+#updateUser:hover,#UpdateAdmin:hover{
+    background-color: orangered;
+    color: snow;
+}
+form h2{
+    font-size: 0.8em;
+    text-align: center;
+    color: snow;
+}
+/*****Media queries*********/
+@media screen and (max-width:1050px){
+    body{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:414px){
+    body{
+        font-size: 30px;
+    }
+    #main{
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+    }
+    #loginForm,#signupForm,#adminForm,#InsertProduct,#PAYMENTFORM{
+        width: 80%;
+        left: 10%;
+    }
+}
+
+

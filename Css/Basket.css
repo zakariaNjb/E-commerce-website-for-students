@@ -1,0 +1,184 @@
+#Basket{
+    height: 100%;
+    transition-duration: 900ms;
+    background-color: #E6E6FA;
+    display: flex;
+}
+#left_Basket{
+    position: absolute;
+    height: 100%;
+    width: 70%;
+}
+#right_Basket{
+    position: absolute;
+    width: 30%;
+    right: 0%;
+    height: 100%;
+    background-color: #41A420;
+}
+/*********Main basket*********/
+#main_Basket{
+    /*background-color: red;*/
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: 90%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+#head{
+    flex-grow: 0.25;
+    padding: 0px 10px;
+    display:flex;
+    justify-content:space-between
+}
+#head li{
+    list-style: none;
+}
+#body{
+    position: relative;
+    flex-grow: 0.50;
+    height: 50%;
+    /*background-color: green;*/
+    position: relative;
+    overflow-y: scroll;
+    
+}
+#end{
+    flex-grow: 0.25;
+    padding: 0px 10px;
+}
+/***********Main basket**********/
+div.Item{
+    padding: 10px 10px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 10px;
+}
+div.Item li{
+    list-style: none;
+    font-size: 0.6em;
+}
+#Item_left{
+    flex-grow: 0.4;
+    display: flex;
+}
+#Item_left ul{
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    list-style: none;
+}
+
+#Item_left img{
+    align-self: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 100px;
+    border-style: groove;
+    border-width: 1px;
+}
+i{
+    cursor: pointer;
+}
+#Item_midlle{
+    flex-grow: 0.25;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+#Item_right{
+    font-size: 0.6em;
+    flex-grow: 0.35;
+    display: flex;
+    justify-content: flex-end;
+}
+/***********the bottom side (left side)******/
+#end{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    list-style: none;
+    align-items: flex-end;
+}
+#click{
+    font-size: 1.5em;
+    display: none;
+}
+/***********Payment************/
+#payment{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+}
+#payment h3{
+    text-align: center;
+    color: snow;
+}
+#paymentForm{
+    width: 100%;
+    box-sizing: border-box;
+}
+#paymentForm input{
+    background-color: #41A420;
+    color: snow;
+    padding: 20px 0px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-style: groove;
+    border-width: 0px 0px 2px 0px;
+    border-color: snow;
+}
+input[type="text"]::placeholder {
+    color: snow;
+}
+#payNow{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 20px;
+    color: snow;
+    background-color: #41A420;
+    cursor: pointer;
+    font-size: 0.6em;
+    transition-duration: 200ms;
+}
+#payNow:hover{
+    font-size: 0.8em;
+}
+/********Media queries*******/
+@media screen and (max-width:700px){
+    #right_Basket{
+        display: none;
+        flex-grow: 0;
+    }
+    #main_Basket{
+        width: 95%;
+        left: 2.5%;
+    }
+    #left_Basket{
+        width: 100%;
+    }
+    #Item_midlle{
+        display: block;
+    }
+    #Item_midlle li{
+        text-align: center;
+    }
+    #Item_left{
+        flex-grow: 0.5;
+        width: 50%;
+    }
+    #click{
+        display: block;
+        color: #41A420;
+    }
+}

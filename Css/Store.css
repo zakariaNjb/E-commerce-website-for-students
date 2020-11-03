@@ -1,0 +1,264 @@
+#store{
+    position: relative;
+    height: 100%;
+    transition-duration: 900ms;
+}
+/******left middle & right side********/
+#menu{
+    background-color:rgba(10, 10, 10, 0.349);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    width: 5%;
+}
+#goods{
+    background-color:  rgba(10, 10, 10, 0.349);
+    /*background-color: rgba(10, 10, 10, 0.815);*/
+    height: 100%;
+    position: absolute;
+    left: 5%;
+    width: 95%;
+}
+#info{
+    background-color: black;
+    height: 100%;
+    position: absolute;
+    width: 30%;
+    opacity: 0;
+    right: 0;
+    z-index: -1;
+}
+#goods,#info{
+    transition-duration: 300ms;
+}
+/****MENU****/
+#menu span li{
+    list-style: none;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu span li a i{
+    font-size: 0.6em;
+    transition-duration: 200ms;
+    color: grey;
+}
+#menu span li a i:hover{
+    color: snow;
+}
+/********Search bar*********/
+#search{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 10%;
+}
+#search span{
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+#search span input{
+    background-color:rgba(14, 13, 13, 0.445) ;
+    color: snow;
+    flex-grow: 0.9;
+    width: 100%;
+    border: none;
+    padding: 5px 0px;
+    outline: none;
+    text-align: center;
+}
+#search span i{
+    color: grey;
+    flex-grow: 0.1;
+    padding: 0px 5px;
+    font-size: 0.8em;
+    transition-duration: 200ms;
+}
+#search span i:hover{
+    color: snow;
+}
+/*****Products*********/
+#products{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    height: 90%;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+#products h3{
+    width: 100%;
+    margin: 30px 0px;
+    text-align: center;
+    color: snow;
+}
+div.Pro{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+#products div.Pro a{
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    background-color:green;
+    color: snow;
+    border-radius: 10px;
+}
+#products div.Pro a img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 250px;
+}
+div.Pro a span{
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+div.Pro a span li{
+    list-style: none;
+    font-size: 0.6em;
+    text-align: center;
+}
+/**********Info**************/
+#info span:first-child{
+    padding:0px 10px;
+    box-sizing: border-box;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+#arrowDownInfo{
+    visibility: hidden;
+    font-size:0.8em;
+    color:snow;
+}
+#info span:first-child li{
+    color: snow;
+    list-style: none;
+    font-size: 0.8em;
+}
+#info span:nth-child(2){
+    height: 75%;
+    display: block;
+    position: relative;
+}
+#info span:nth-child(2) img{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 2%;
+    height: 78%;
+}
+#description{
+    margin: 0;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 82%;
+    height: 16%;
+    color: snow;
+    overflow-y: scroll;
+    font-size: 0.6em;
+    text-align: center;
+}
+#info span:last-child{
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#info span:last-child button{
+    width: 90%;
+    position: relative;
+    left: 5%;
+    padding: 7px 0px;
+    border: none;
+    outline: none;
+    color: snow;
+    transition-duration: 200ms;
+}
+#info span:last-child button:first-child{
+    background-color: rgba(255, 51, 0, 0.363);
+}
+#info span:last-child button:last-child{
+    background-color: rgba(0, 128, 0, 0.411);
+}
+#info span:last-child button:first-child:hover{
+    background-color: rgb(253, 81, 7);
+}
+#info span:last-child button:last-child:hover{
+    background-color: green;
+}
+
+/**************scroll bar styling***********/
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+/*************Media queries*********/
+@media screen and (max-width:700px){
+    /****menu******/
+    #menu{
+        display: none;
+    }
+    #menu span li a i{
+        font-size: 1em;
+    }
+    /******goods******/
+    #goods{
+        width: 100%;
+        left: 0;
+    }
+    div.Pro{
+        width: 100%;
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+    }
+    div.Pro a span{
+        display: block;
+    }
+    div.Pro a span li{
+        width: 100%;
+        font-size: 0.7em;
+    }
+    #products h3{
+        font-size: 2em;
+    }
+    /*******info********/
+    #info{
+        width: 35%;
+    }
+    #info span:last-child button{
+        padding: 10px 0px;
+    }
+    #arrowDownInfo{
+        visibility: visible;
+        font-size: 0.8em;
+        color: snow;
+    }
+    
+}
